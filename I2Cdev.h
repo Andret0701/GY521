@@ -7,17 +7,17 @@
 #ifndef I2Cdev_h
 #define I2Cdev_h
 
-#include "mbed.h"
-//#include "MicroBitI2C.h"
+//#include "mbed.h"
+#include "MicroBitI2C.h"
 
 //I2C_SDA0, I2C_SCL0
-#define I2C_SDA p20//I2C_SDA0 //p30 //p28
-#define I2C_SCL p19//I2C_SCL0 //p7  //p27
+#define I2C_SDA I2C_SDA0 //p30 //p28
+#define I2C_SCL I2C_SCL0 //p7  //p27
 
 class I2Cdev {
     private:
-        I2C i2c;
-        //MicroBitI2C i2c;
+        //I2C i2c;
+        MicroBitI2C i2c;
         Serial debugSerial;
     public:
         I2Cdev();
